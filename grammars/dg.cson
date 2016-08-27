@@ -1,0 +1,140 @@
+scopeName: "source.dg"
+comment: ""
+fileTypes: [
+  "dg"
+]
+foldingStartMarker: "\\("
+foldingStopMarker: "\\)"
+name: "dg"
+patterns: [
+  { 'match': '\\s+' }
+  {
+    'name': 'comment.line.number-sign.dg'
+    'captures': '1': 'name': 'punctuation.definition.comment.dg'
+    'match': '(#).*$\\n?'
+  }
+  {
+    'name': 'constant.numeric.integer.binary.dg'
+    'match': '(?i)0b[01]+'
+  }
+  {
+    'name': 'constant.numeric.integer.octal.dg'
+    'match': '(?i)0o[0-7]+'
+  }
+  {
+    'name': 'constant.numeric.integer.hexadecimal.dg'
+    'match': '(?i)0x[0-9a-f]+'
+  }
+  {
+    'name': 'constant.numeric.float.dg'
+    'match': '(?i)[+-]?[0-9]+\\.[0-9]+(e[+-]?[0-9]+)?j?'
+  }
+  {
+    'name': 'constant.numeric.float.dg'
+    'match': '(?i)[+-]?[0-9]+e[+-]?[0-9]+j?'
+  }
+  {
+    'name': 'constant.numeric.integer.decimal.dg'
+    'match': '(?i)[+-]?[0-9]+j?'
+  }
+  {
+    'name': 'string.quoted.double.dg'
+    'patterns': [ {
+      'name': 'constant.character.escape.dg'
+      'match': '\\\\.'
+    } ]
+    'endCaptures': '0': 'name': 'punctuation.definition.string.end.dg'
+    'begin': '([bB][rR]|[rR]?[bB]?)"""'
+    'end': '"""'
+    'beginCaptures': '0': 'name': 'punctuation.definition.string.begin.dg'
+  }
+  {
+    'name': 'string.quoted.single.dg'
+    'patterns': [ {
+      'name': 'constant.character.escape.dg'
+      'match': '\\\\.'
+    } ]
+    'endCaptures': '0': 'name': 'punctuation.definition.string.end.dg'
+    'begin': '([bB][rR]|[rR]?[bB]?)\'\'\''
+    'end': '\'\'\''
+    'beginCaptures': '0': 'name': 'punctuation.definition.string.begin.dg'
+  }
+  {
+    'name': 'string.quoted.double.dg'
+    'patterns': [ {
+      'name': 'constant.character.escape.dg'
+      'match': '\\\\.'
+    } ]
+    'endCaptures': '0': 'name': 'punctuation.definition.string.end.dg'
+    'begin': '([bB][rR]|[rR]?[bB]?)"'
+    'end': '"'
+    'beginCaptures': '0': 'name': 'punctuation.definition.string.begin.dg'
+  }
+  {
+    'name': 'string.quoted.single.dg'
+    'patterns': [ {
+      'name': 'constant.character.escape.dg'
+      'match': '\\\\.'
+    } ]
+    'endCaptures': '0': 'name': 'punctuation.definition.string.end.dg'
+    'begin': '([bB][rR]|[rR]?[bB]?)\''
+    'end': '\''
+    'beginCaptures': '0': 'name': 'punctuation.definition.string.begin.dg'
+  }
+  {
+    'name': 'keyword.operator.function.infix.dg'
+    'captures':
+      '1': 'name': 'punctuation.definition.entity.dg'
+      '2': 'name': 'punctuation.definition.entity.dg'
+    'match': '(`)\\w+\'*(`)'
+  }
+  {
+    'name': 'keyword.operator.logical.dg'
+    'match': '\\b(and|in|is|or|where)\\b'
+  }
+  {
+    'name': 'variable.other.readwrite.instance.dg'
+    'match': '@\\s*\\w+\'*'
+  }
+  {
+    'name': 'keyword.operator.dg'
+    'match': '[!$%&*+\\-./:<-@\\\\^|~;,]+'
+  }
+  {
+    'name': 'support.type.builtin.dg'
+    'match': '(?x)(?<!\\.)(\n\u0009\u0009\u0009\u0009bool|bytearray|bytes|classmethod|complex|dict\'?|float|frozenset\n\u0009\u0009\u0009   |int|list\'?|memoryview|object|property|range|set\'?|slice|staticmethod\n\u0009\u0009\u0009   |str|super|tuple\'?|type\n\u0009\u0009\u0009)(?![\'\\w])'
+  }
+  {
+    'name': 'support.function.builtin.dg'
+    'match': '(?x)(?<!\\.)(\n\u0009\u0009\u0009\u0009abs|all|any|bin|bind|chr|cmp|compile|complex|delattr|dir|divmod\n\u0009\u0009\u0009   |drop|dropwhile|enumerate|eval|filter|flip|foldl1?|format|fst\n\u0009\u0009\u0009   |getattr|globals|hasattr|hash|head|hex|id|init|input|isinstance\n\u0009\u0009\u0009   |issubclass|iter|iterate|last|len|locals|map|mx|min|next|oct|open|ord\n\u0009\u0009\u0009   |pow|print|repr|reversed|round|setattr|scanl1?|snd|sorted|sum|tail|take\n\u0009\u0009\u0009   |takewhile|vars|zip\n\u0009\u0009\u0009)(?![\'\\w])'
+  }
+  {
+    'name': 'constant.language.dg'
+    'match': '(?x)(?<!\\.)(\n\u0009\u0009\u0009\u0009Ellipsis|NotImplemented|None|True|False\n\u0009\u0009\u0009)(?![\'\\w])'
+  }
+  {
+    'name': 'variable.language.dg'
+    'match': '(?x)(?<!\\.)(self)(?![\'\\w])'
+  }
+  {
+    'name': 'support.type.exception.dg'
+    'match': '(?x)(?<!\\.)(\n\u0009\u0009\u0009\u0009Exception|KeyboardInterrupt|SystemExit|StopIteration|GeneratorExit\n\u0009\u0009\u0009   |[A-Z]\\w*(Error|Exception|Warning)\n\u0009\u0009\u0009)(?![\'\\w])'
+  }
+  {
+    'name': 'keyword.control.flow.dg'
+    'match': '(?x)(?<!\\.)(\n\u0009\u0009\u0009\u0009except|finally|for|if|import|not|otherwise|raise|subclass|while|with|yield\n\u0009\u0009\u0009)(?![\'\\w])'
+  }
+  {
+    'name': 'variable.other.dg'
+    'match': '[A-Z_]+\'*(?![\'\\w])'
+  }
+  {
+    'name': 'support.type.dg'
+    'match': '[A-Z]\\w*\'*(?![\'\\w])'
+  }
+  { 'match': '\\w+\'*' }
+  {
+    'name': 'punctuation.block.dg'
+    'match': '[()]'
+  }
+]

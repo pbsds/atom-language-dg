@@ -1,0 +1,12 @@
+{
+  "name": "language-dg",
+  "version": "0.1.0",
+  "description": "dg highlighting for Atom",
+  "keywords": [],
+  "repository": "https://github.com/iamale/atom-language-dg",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
+}
