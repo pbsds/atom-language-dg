@@ -93,6 +93,10 @@ patterns: [
     'match': '\\b(and|in|is|or|where)\\b'
   }
   {
+    'name': 'invalid.deprecated.not-in.dg'
+    'match': '\\b(not\\s+in)\\b'
+  }
+  {
     'name': 'variable.other.readwrite.instance.dg'
     'match': '@\\s*\\w+\'*'
   }
