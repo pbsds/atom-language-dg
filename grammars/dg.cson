@@ -110,7 +110,7 @@ patterns: [
   }
   {
     'name': 'support.function.builtin.dg'
-    'match': '(?x)(?<!\\.)(abs|all|any|bin|bind|chr|cmp|compile|complex|delattr|dir|divmod|drop|dropwhile|enumerate|eval|filter|flip|foldl1?|format|fst|getattr|globals|hasattr|hash|head|hex|id|init|input|isinstance|issubclass|iter|iterate|last|len|locals|map|mx|min|next|oct|open|ord|pow|print|repr|reversed|round|setattr|scanl1?|snd|sorted|sum|tail|take|takewhile|vars|zip)(?![\'\\w])'
+    'match': '(?x)(?<!\\.)(abs|all|any|bin|bind|chain|chr|cmp|compile|complex|delattr|dir|divmod|drop|dropwhile|enumerate|eval|exhaust|filter|flip|foldl1?|format|fst|getattr|globals|hasattr|hash|head|hex|id|init|input|isinstance|issubclass|iter|iterate|last|len|locals|map|mx|min|next|oct|open|ord|pow|print|repr|reversed|round|setattr|scanl1?|snd|sorted|sum|tail|take|takewhile|vars|zip)(?![\'\\w])'
   }
   {
     'name': 'constant.language.dg'
