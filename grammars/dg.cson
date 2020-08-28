@@ -126,7 +126,7 @@ patterns: [
   }
   {
     'name': 'keyword.control.flow.dg'
-    'match': '(?x)(?<!\\.)(break|except|finally\\s+=>|for|if|import|not|otherwise|raise|return|subclass|while|with|yield(\\s+from))(?![\'\\w])'
+    'match': '(?x)(?<!\\.)(break|except|finally\\s+=>|for|if|import|not|otherwise|raise|return|subclass|while|with|yield(\\s+from)?)(?![\'\\w])'
   }
   {
     'name': 'variable.other.dg'
